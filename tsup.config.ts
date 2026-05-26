@@ -5,7 +5,7 @@ export default defineConfig({
     index: "src/index.ts",
     react: "src/react.ts",
     // next: "src/next.ts",
-    swiper: "src/swiper/index.ts",
+    swiper: "src/hooks/swiper/index.ts",
   },
   format: ["cjs", "esm"],
   dts: true,
