@@ -513,7 +513,3 @@ PRs are welcome! Please ensure:
 ---
 
 ⭐ Star the [GitHub repository](https://github.com/yaquya/react-additional-hooks) if you find this project useful!
-
-```
-
-```
