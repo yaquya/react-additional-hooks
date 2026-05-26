@@ -1,5 +1,4 @@
-// Universal hooks (work in both React and Next.js)
-
+export * from "./hooks/useBreakpoint";
 export { useClickOutside } from "./hooks/useClickOutside";
 export { useCopyToClipboard } from "./hooks/useCopyToClipboard";
 export { useCounter } from "./hooks/useCounter";
