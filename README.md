@@ -1,4 +1,3 @@
-````markdown
 # react-additional-hooks
 
 [![npm version](https://badge.fury.io/js/react-additional-hooks.svg)](https://www.npmjs.com/package/react-additional-hooks)
@@ -15,7 +14,6 @@ yarn add react-additional-hooks
 # or
 pnpm add react-additional-hooks
 ```
-````
 
 ## 🎯 Features
 
