@@ -1,0 +1,15 @@
+src/
+test/
+coverage/
+tsconfig.json
+tsup.config.ts
+vitest.config.ts
+.eslintrc.json
+.prettierrc
+.gitignore
+.husky/
+node_modules/
+*.log
+*.tsbuildinfo
+.vscode/
+.idea/

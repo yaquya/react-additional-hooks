@@ -1,0 +1,16 @@
+// Universal hooks (work in both React and Next.js)
+
+export { useClickOutside } from "./hooks/useClickOutside";
+export { useCopyToClipboard } from "./hooks/useCopyToClipboard";
+export { useCounter } from "./hooks/useCounter";
+export { useDebounce } from "./hooks/useDebounce";
+export { useHover } from "./hooks/useHover";
+export { useInterval } from "./hooks/useInterval";
+export { useKeyPress } from "./hooks/useKeyPress";
+export { useLocalStorage } from "./hooks/useLocalStorage";
+export { useMediaQuery } from "./hooks/useMediaQuery";
+export { usePrevious } from "./hooks/usePrevious";
+export { useSessionStorage } from "./hooks/useSessionStorage";
+export { useThrottle } from "./hooks/useThrottle";
+export { useTimeout } from "./hooks/useTimeout";
+export { useToggle } from "./hooks/useToggle";
