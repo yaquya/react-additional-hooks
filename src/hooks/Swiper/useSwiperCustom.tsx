@@ -1,38 +1,6 @@
-// src/swiper/useSwiperCustom.ts
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { Swiper as SwiperType } from "swiper";
-
-let swiperWarningShown = false;
-let swiperAvailable = false;
-
-/**
- * Проверка наличия Swiper
- */
-const checkSwiperInstalled = async (): Promise<boolean> => {
-  if (swiperAvailable) return true;
-
-  try {
-    await import("swiper");
-    swiperAvailable = true;
-    return true;
-  } catch (e) {
-    if (!swiperWarningShown && typeof window !== "undefined") {
-      console.warn(e);
-      console.warn(
-        "[react-additional-hooks] Swiper is not installed. " +
-          "To use useSwiperCustom hook, please install it:\n" +
-          "npm install swiper\n" +
-          "or\n" +
-          "yarn add swiper\n" +
-          "or\n" +
-          "pnpm add swiper",
-      );
-      swiperWarningShown = true;
-    }
-    return false;
-  }
-};
 
 export interface SwiperCustomReturn {
   swiperInitHandler: (initSwiperRef: SwiperType) => void;
@@ -53,13 +21,29 @@ export interface SwiperCustomReturn {
  * Custom hook for Swiper slider management
  *
  * @requires swiper - Please install swiper: `npm install swiper`
+ *
+ * @example
+ * ```tsx
+ * import { useSwiperCustom } from 'react-additional-hooks/swiper';
+ * import { Swiper, SwiperSlide } from 'swiper/react';
+ * import 'swiper/css';
+ *
+ * function MySlider() {
+ *   const { swiperInitHandler, activeSlideIndex, nextSlideHandler } = useSwiperCustom();
+ *
+ *   return (
+ *     <>
+ *       <Swiper onSwiper={swiperInitHandler}>
+ *         <SwiperSlide>Slide 1</SwiperSlide>
+ *         <SwiperSlide>Slide 2</SwiperSlide>
+ *       </Swiper>
+ *       <button onClick={nextSlideHandler}>Next: {activeSlideIndex}</button>
+ *     </>
+ *   );
+ * }
+ * ```
  */
 const useSwiperCustom = (): SwiperCustomReturn => {
-  // Асинхронная проверка при монтировании
-  useEffect(() => {
-    checkSwiperInstalled();
-  }, []);
-
   const swiperRef = useRef<SwiperType | null>(null);
   const [isSwiperInitialized, setIsSwiperInitialized] =
     useState<boolean>(false);

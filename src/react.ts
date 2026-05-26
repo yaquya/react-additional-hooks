@@ -13,4 +13,3 @@ export { useSessionStorage } from "./hooks/react/useSessionStorage";
 export { useThrottle } from "./hooks/react/useThrottle";
 export { useTimeout } from "./hooks/react/useTimeout";
 export { useToggle } from "./hooks/react/useToggle";
-export * from "./hooks/Swiper/useSwiperCustom";

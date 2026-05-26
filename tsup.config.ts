@@ -4,7 +4,7 @@ export default defineConfig({
   entry: {
     index: "src/index.ts",
     react: "src/react.ts",
-    next: "src/next.ts",
+    // next: "src/next.ts",
     swiper: "src/swiper/index.ts",
   },
   format: ["cjs", "esm"],

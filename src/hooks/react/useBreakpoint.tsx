@@ -28,7 +28,7 @@ type BreakpointContextValue<T> = {
 } & { width: number };
 
 // Создаём контекст
-const BreakpointContext = createContext<BreakpointContextValue<unknown> | null>(
+const BreakpointContext = createContext<BreakpointContextValue<any> | null>(
   null,
 );
 
