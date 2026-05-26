@@ -5,6 +5,7 @@ export default defineConfig({
     index: "src/index.ts",
     react: "src/react.ts",
     next: "src/next.ts",
+    swiper: "src/swiper/index.ts",
   },
   format: ["cjs", "esm"],
   dts: true,
@@ -12,7 +13,7 @@ export default defineConfig({
   sourcemap: true,
   clean: true,
   treeshake: true,
-  external: ["react", "next", "next/router", "next/navigation"],
+  external: ["react", "next", "next/router", "next/navigation", "swiper"],
   esbuildOptions(options) {
     options.keepNames = true;
   },
